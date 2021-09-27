@@ -1,0 +1,10 @@
+name: protect env.ts
+on: [push, pull_request]
+
+jobs:
+  protect:
+    name: protect
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - run: script/protect_env
